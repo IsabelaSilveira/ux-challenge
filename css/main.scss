@@ -156,24 +156,38 @@ $ft2: 'Roboto', sans-serif;
     padding: 0 15px;
 }
 
-.navigation{
-  background: $cl1;
+.header{
+  position: relative;
+  z-index: 5;
 }
 
-.menu{ width: 100%;}
+.navigation{
+  background: $cl1;
+  display: none;
+}
+
+.menu{ width: 100%; }
 
 .menu__item{
   position: relative;
-  transition: all 0.3s linear 0s;
+  transition: all 0.3s ease-in-out 0s;
 
   
   &:hover{
-    background: lighten($cl1, 12%);
+    background: $cl2;
     .menu__link{ color: $cl3; }
+
+    .menu__dropdown{
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transform: translateY(0%);
+      transition-delay: 0s, 0s, 0.3s;
+    }
   }
 }
 .menu__link{
-  color: lighten($cl1, 60%);
+  color: $cl3;
   font: normal 15px $ft1;
   padding: 10px 20px;
   display: block;
@@ -183,25 +197,28 @@ $ft2: 'Roboto', sans-serif;
 }
 
 .menu__dropdown{ 
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   left: 0;
   top: 100%;
   width: 300px;
   background: $cl3;
   border: 1px solid;
-  transition: all 0.3s linear 0s;
+  transform: translateY(-2em);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 
 #breadcrumb{
-  background: $cl1;
-  margin-top: 15px;
+  background: #f3f3f3;
+  margin-top: 0;
 }
 
 .breadcrumb__item,
 .breadcrumb__active{
   padding: 14px 0;
-  color: lighten($cl1, 60%);
+  color: lighten($cl1, 30%);
   font: normal 14px $ft1;
 }
 
@@ -216,7 +233,7 @@ $ft2: 'Roboto', sans-serif;
 }
 
 .breadcrumb__link{
-  color: lighten($cl1, 60%);
+  color: lighten($cl1, 30%);
   text-decoration: none;
 
   &:hover{ color: $cl2;}
@@ -227,6 +244,43 @@ $ft2: 'Roboto', sans-serif;
 }
 
 #product__header-desk{ display: none;}
+
+#product__content .flashsale{
+  padding: 15px 0;
+  background: $cl1;
+  color: $cl3;
+  font: normal 12px $ft1;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  width: 100%;
+  .row{ 
+    flex-direction: row; 
+    justify-content: space-between; 
+    width: 100%;
+  }
+
+  .btn{ width: 30%;}
+}
+
+.flashsale__value{
+  font: 600 14px $ft1;
+  display: block;
+}
+
+.flashsale__counter{
+  padding-left: 40px;
+  background: url('../img/timer.svg') 0 center no-repeat;
+  height: 36px;
+}
+
+.flashsale__counter,
+.flashsale__status{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
 
 .product__tit{
   color: $cl1;
@@ -268,7 +322,7 @@ $ft2: 'Roboto', sans-serif;
 .product__image{
   padding: 20px;
   border: 1px solid #d6d6d6;
-  margin: 15px 0;
+  margin-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,7 +363,6 @@ $ft2: 'Roboto', sans-serif;
 }
 .variation__item{ 
   flex: 0 1 calc(50% - 5px);
-  padding-right: 10px;
   box-sizing: border-box;
   margin-bottom: 10px; 
 }
@@ -320,11 +373,34 @@ $ft2: 'Roboto', sans-serif;
   color: lighten($cl1, 20%);
   text-decoration: none;
   border: 1px solid #d6d6d6;
+  padding-right: 10px;
+  position: relative;
+  transition: all 0.3s ease-in-out 0s;
 
-  &:hover{ color: $cl1; border-color: $cl1;}
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    opacity: 0;
+    height: 100%;
+    background: $cl2;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  &:hover{ color: $cl2; border-color: $cl2;}
+
 }
-.variation__item.active .variation-link{
-  color: $cl2; border-color: $cl2;
+
+.variation__link:hover::before,
+.variation__link.active::before{
+  opacity: 1;
+}
+
+.variation__link.active{
+  color: $cl1; 
+  border-color: $cl1;
+  &::before{ background: $cl1;}
 }
 
 .variation__thumb{
@@ -351,6 +427,8 @@ $ft2: 'Roboto', sans-serif;
 .color__picker{ display: flex;}
 .color__item{
   margin-right: 10px;
+  &:hover{ cursor: pointer;}
+
   span{
     background-color: $cl3;
     display: block;
@@ -358,6 +436,7 @@ $ft2: 'Roboto', sans-serif;
     height: 40px;
     border: 3px solid #d6d6d6;
     border-radius: 40px;
+    transition: all 0.3s ease-in-out 0s;
   }
 }
 
@@ -415,11 +494,9 @@ $ft2: 'Roboto', sans-serif;
 @media (min-width: 992px){
   .row{ width: 960px; margin: 0 auto;}
 
-  #breadcrumb{ background: none;}
-  .breadcrumb__item, 
-  .breadcrumb__active{
-    color: #9a9a9a;
-  }
+  .navigation{ display: block;}
+
+  #breadcrumb{ background: none; }
 
   #product__content{
     .row{ flex-direction: row; justify-content: space-between;}
@@ -433,6 +510,11 @@ $ft2: 'Roboto', sans-serif;
 
   .product__image{ width: 50%;}
   .product__info{ width: 40%;}
+
+  #product__content .flashsale{ 
+    position: static; 
+    .btn{ width: 40%;}
+  }
 
 }
 

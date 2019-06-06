@@ -1,7 +1,12 @@
 jQuery(document).ready(function($){
+    $('.variation__link').click(function(e){
+        e.preventDefault();
+        $('.variation__link').removeClass('active');
+        $(this).addClass('active');
+    });
 
-    $(".menu__item").hover(function () {
-        console.log("Hover no menu");
-        $(this).children("ul").stop().delay(200).animate({height: "toggle", opacity: "toggle"}, 200);
+    $('.color__item').click(function(){
+        $('.color__item').removeClass('active');
+        $(this).addClass('active');
     });
 });
