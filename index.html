@@ -1,40 +1,665 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto&display=swap" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <title>GoCase Challenge</title>
 </head>
+
 <body>
+    <header class="header">
+        <nav class="navigation">
+        <div class="row">
+        <ul class="menu d-flex">
+            <li class="menu__item">
+                <a href="https://www.gocase.com.br/ofertas-relampago-gocase" class="menu__link">Ofertas Relâmpago</a>
+            </li>
+
+            <li class="menu__item">
+                <a href="#" class="menu__link">
+                    Categorias
+                    <i class="arrow_carrot-down main-menu__arrow--top"></i>
+                </a>
+                <ul class="menu__dropdown">
+                    <li class="">
+                        <a href="https://www.gocase.com.br/mais-vendidos">
+                            Mais Vendidos
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://www.gocase.com.br/t/personalizaveis">
+                            Personalizáveis
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/t/tipos-de-produtos/cases-picture">
+                            Personalize Com Sua Foto
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/t/kits">
+                            Kits
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/t/temas/universo">
+                            Universo
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/t/series-e-filmes">
+                            Séries e Filmes
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/t/profissoes">
+                            Profissões
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/t/pets">
+                            Pets
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/t/themes/floral">
+                            Floral
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://www.gocase.com.br/collections/viajantes">
+                            Viajantes
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://www.gocase.com.br/futebol">
+                            Futebol
+                            <i class="arrow_carrot-right main-menu__arrow"></i>
+                        </a>
+                        <ul class="main-menu__level-2">
+                            <li class="">
+                                <a href="/saopaulo">
+                                    São Paulo
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.gocase.com.br/corinthians">
+                                    Corinthians
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="https://www.gocase.com.br/paraeles">
+                            Preferida por Eles
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            Coleções
+                            <i class="arrow_carrot-right main-menu__arrow"></i>
+                        </a>
+                        <ul class="main-menu__level-2">
+                            <li class="">
+                                <a href="https://gocase.com.br/collections/depois-das-onze">
+                                    Depois das Onze
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.gocase.com.br/collections/bythalitareboucas">
+                                    Thalita Rebouças
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/colecoes/bruna-vieira">
+                                    Bruna Vieira
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/colecoes/bruna-tavares">
+                                    Bruna Tavares
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/collections/lela-brandao">
+                                    Lela Brandão
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/colecoes/amaro">
+                                    Amaro
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/colecoes/tardezinha">
+                                    Tardezinha
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/collections/endeavor">
+                                    Endeavor
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/colecoes/zee-dot-dog">
+                                    Zee.Dog
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="https://www.gocase.com.br/t/artistas">
+                            Artistas
+                            <i class="arrow_carrot-right main-menu__arrow"></i>
+                        </a>
+                        <ul class="main-menu__level-2">
+                            <li class="">
+                                <a href="/t/artistas/chuvisco-de-risco">
+                                    Chuvisco de Risco
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/artistas/cruella">
+                                    Cruella
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/artistas/coisas-boas-acontecem">
+                                    Coisas Boas Acontecem
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/artistas/bia-pof">
+                                    Bia Pof
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/artistas/dessamore">
+                                    Dessamore
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/artistas/dani-purper">
+                                    Dani Purper
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/artistas/estudio-sinestesia">
+                                    Estúdio Sinestesia
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/artistas/indiretas-do-bem">
+                                    Indiretas do Bem
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/artistas/jady-salvatico">
+                                    Jady Salvático
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/artistas/life-on-a-draw">
+                                    Life On A Draw
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/artistas/manifesto-cuticuti">
+                                    Manifesto Cuticuti
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/artistas/marques-talita">
+                                    Marques Talita
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/artistas/rodrigo-falco">
+                                    Rodrigo Falco
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/artistas/siga-os-baloes">
+                                    Siga os Balões
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/artistas/sublinhando">
+                                    Sublinhando
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu__item">
+                <a href="https://www.gocase.com.br/capinha-para-celular" class="menu__link">
+                    Capinhas
+                    <i class="arrow_carrot-down main-menu__arrow--top"></i>
+                </a>
+                <ul class="menu__dropdown">
+                    <li class="">
+                        <a href="https://www.gocase.com.br/capinha-para-celular?order=newest">
+                            Lançamentos
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            Tipos de Capinhas
+                            <i class="arrow_carrot-right main-menu__arrow"></i>
+                        </a>
+                        <ul class="main-menu__level-2">
+                            <li class="">
+                                <a href="https://www.gocase.com.br/collections/casesmirror">
+                                    Case Mirror
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/tipos-de-produtos/capinhas-para-celular/holo-cases">
+                                    Capinhas Holo
+                                </a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="https://www.gocase.com.br/capinha-para-celular?case_type=antishock&amp;current_store_id=1&amp;device=iphone7">
+                                    Capinha Anti-Impacto PRO
+                                </a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="/capinha-para-celular-flow?case_type=flowglitterpink&amp;current_store_id=1&amp;device=iphone7">
+                                    Capinhas Flow
+                                </a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="/capinha-para-celular?case_type=standard&amp;current_store_id=1&amp;device=iphone6">
+                                    Capinhas Transparentes
+                                </a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="/capinha-para-celular?case_type=glittercasegold&amp;current_store_id=1&amp;device=iphone6">
+                                    Glitter Gold
+                                </a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="https://www.gocase.com.br/capinha-para-celular?case_type=glittercaserose&amp;current_store_id=1&amp;device=iphone6">
+                                    Glitter Rosê
+                                </a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="/capinha-para-celular?case_type=glittercasesilver&amp;current_store_id=1&amp;device=iphone6">
+                                    Glitter Silver
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinha-para-celular-fascino?case_type=any&amp;device=iphone6">
+                                    Rosê Fascino
+                                </a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="/capinha-para-celular-fascino?case_type=acquafascino&amp;current_store_id=1&amp;device=iphone7">
+                                    Acqua Fascino
+                                </a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="/capinha-para-celular?case_type=colorcaseblack&amp;current_store_id=1&amp;device=iphone6">
+                                    Color Black
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/t/tipos-de-produtos/cases-picture">
+                                    Personalize Com Sua Foto
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="https://www.gocase.com.br/capinhas-para-celular/iphone">
+                            iPhone
+                            <i class="arrow_carrot-right main-menu__arrow"></i>
+                        </a>
+                        <ul class="main-menu__level-2">
+                            <li class="">
+                                <a href="https://www.gocase.com.br/capinhas-para-celular/iphone-5-5s">
+                                    iPhone 5/5S/SE
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/iphone-6-6s">
+                                    iPhone 6/6s
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/iphone-6-plus-6s-plus">
+                                    iPhone 6 Plus/6s Plus
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.gocase.com.br/capinhas-para-celular/iphone-7">
+                                    iPhone 7
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/iphone-7-plus">
+                                    iPhone 7 Plus
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/iphone-8">
+                                    Iphone 8
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/iphone-8-plus">
+                                    Iphone 8 Plus
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/iphone-x">
+                                    iPhone X/XS
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.gocase.com.br/capinhas-para-celular/iphone-xr">
+                                    iPhone XR
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.gocase.com.br/capinhas-para-celular/iphone-xs-max">
+                                    iPhone XS Max
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="/capinhas-para-celular/samsung">
+                            Samsung
+                            <i class="arrow_carrot-right main-menu__arrow"></i>
+                        </a>
+                        <ul class="main-menu__level-2">
+                            <li class="">
+                                <a href="https://www.gocase.com.br/capinhas-para-celular/samsung-galaxy-a6-plus">
+                                    Samsung Galaxy A6 Plus
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/samsung-galaxy-j5">
+                                    Samsung Galaxy J5 (2015)
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.gocase.com.br/capinhas-para-celular/samsung-galaxy-j6">
+                                    Samsung Galaxy J6
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/samsung-galaxy-j7-prime">
+                                    Samsung Galaxy J7 Prime / J7 Prime 2
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/samsung-galaxy-j7-pro">
+                                    Samsung Galaxy J7 Pro
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/samsung-galaxy-s7-edge">
+                                    Samsung Galaxy S7 Edge
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/samsung-galaxy-s7">
+                                    Samsung Galaxy S7
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.gocase.com.br/capinhas-para-celular/samsung-galaxy-j8">
+                                    Samsung Galaxy J8
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/samsung-galaxy-s8">
+                                    Samsung Galaxy S8
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/samsung-galaxy-s8-plus">
+                                    Samsung Galaxy S8 Plus
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/samsung-galaxy-s9">
+                                    Samsung Galaxy S9
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/samsung-galaxy-s9-plus">
+                                    Samsung Galaxy S9 Plus
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="/capinhas-para-celular/motorola">
+                            Motorola
+                            <i class="arrow_carrot-right main-menu__arrow"></i>
+                        </a>
+                        <ul class="main-menu__level-2">
+                            <li class="">
+                                <a href="/capinhas-para-celular/motorola-moto-g5s">
+                                    Motorola Moto G5S
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/motorola-moto-g5s-plus">
+                                    Motorola Moto G5S Plus
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/capinhas-para-celular/motorola-moto-g6-play">
+                                    Motorola Moto G6 Play
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="/peliculas-anti-impacto">
+                            Película Anti-Impacto
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/t/tipos-de-produtos/grip">
+                            GoGrip
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu__item">
+                <a href="#" class="menu__link">
+                    Carregadores
+                    <i class="arrow_carrot-down main-menu__arrow--top"></i>
+                </a>
+                <ul class="menu__dropdown">
+                    <li class="">
+                        <a href="/carregadores-portateis">
+                            Carregadores Portáteis
+                            <i class="arrow_carrot-right main-menu__arrow"></i>
+                        </a>
+                        <ul class="main-menu__level-2">
+                            <li class="">
+                                <a href="/carregador-portatil-10000mah">
+                                    Extra Carga
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/carregador-portatil-slim-5000mah">
+                                    Slim
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="/carregadores-gocase">
+                            Carregadores de Parede
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/cabos-gocase">
+                            Cabos Gocase
+                            <i class="arrow_carrot-right main-menu__arrow"></i>
+                        </a>
+                        <ul class="main-menu__level-2">
+                            <li class="">
+                                <a href="/cabo-iphone-gocase-lightning-certificado-apple">
+                                    Apple Lightning
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="/cabo-personalizado-micro-usb-android-gocase">
+                                    Android Micro USB
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.gocase.com.br/cabo-personalizado-type-c-para-android-gocase">
+                                    Android Type C
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu__item">
+                <a href="https://www.gocase.com.br/mochilas" class="menu__link">
+                    Mochilas
+                </a>
+            </li>
+
+            <li class="menu__item">
+                <a href="https://www.gocase.com.br/wallets" class="menu__link">
+                    Carteiras
+                    <i class="arrow_carrot-down main-menu__arrow--top"></i>
+                </a>
+                <ul class="menu__dropdown">
+                    <li class="">
+                        <a href="/t/tipos-de-produtos/carteiras-soho">
+                            Carteiras Soho
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/t/product-types/carteiras-saffiano">
+                            Carteiras Saffiano
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/t/product-types/carteira-capri">
+                            Carteira Capri
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu__item">
+                <a href="#" class="menu__link">
+                    Acessórios
+                    <i class="arrow_carrot-down main-menu__arrow--top"></i>
+                </a>
+                <ul class="menu__dropdown">
+                    <li class="">
+                        <a href="/case-clutch-notebook-gocase">
+                            Clutch Capa Notebook
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://www.gocase.com.br/necessaires">
+                            Necessaires
+                            <i class="arrow_carrot-right main-menu__arrow"></i>
+                        </a>
+                        <ul class="main-menu__level-2">
+                            <li class="">
+                                <a href="https://www.gocase.com.br/collections/necessaire-multi">
+                                    Necessaire Multi
+                                </a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="https://www.gocase.com.br/necessairedemaquiagem?current_store_id=1&amp;order=newest">
+                                    Necessaire de Maquiagem
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="https://www.gocase.com.br/collections/organizers">
+                            Organizers
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://www.gocase.com.br/microbags?current_store_id=1&amp;order=favorites">
+                            Microbags
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="https://www.gocase.com.br/collections/pochetes">
+                            Pochetes
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu__item">
+                <a href="https://suporte.gocase.com.br/hc/pt-br" class="menu__link">
+                    Ajuda
+                </a>
+            </li>
+        </ul>
+        </div>
+        </nav>
+    </header>
     <main class="product">
         <div id="breadcrumb">
-            <div class="row">
-                <a href="#" title="Início">Início</a>
-                <a href="#" title="Personalizaveis">Personalizaveis</a>
-            </div>
+            <ol class="row">
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link" title="Início">Início</a>
+                <li class="breadcrumb__item"><span class="breadcrumb__active">Personalizaveis</span>
+            </ol>
         </div>
 
         <section id="product__content">
             <div class="row">
-                <div id="mobile_tit" class="product__header">
+                <div id="product__header-mobile" class="product__header">
                     <h1 class="product__tit">Capinha para celular Poeira das estrelas Manuscrita</h1>
-                    <div class="product__promotion">
-                        <span class="product__price old">R$ 79,90</span>
-                        <span class="product__price new">R$ 69,90</span>
-                    </div>
- 
-                    <span class="stamped-badge" onclick="goToByScroll('reviews')">
-                        <span class="stamped-starrating stamped-badge-starrating">
-                            <i class="stamped-fa stamped-fa-star"></i>
-                            <i class="stamped-fa stamped-fa-star"></i>
-                            <i class="stamped-fa stamped-fa-star"></i>
-                            <i class="stamped-fa stamped-fa-star"></i>
-                            <i class="stamped-fa stamped-fa-star-half-o"></i>
+
+                    <div class="d-flex">
+                        <div class="product__promotion">
+                            <span class="product__price old">R$ 79,90</span>
+                            <span class="product__price new">R$ 69,90</span>
+                        </div>
+
+                        <span class="stars__rating" onclick="goToByScroll('reviews')">
+                            <span class="stamped-starrating stamped-badge-starrating">
+                                <i class="stars"></i>
+                                <i class="stars"></i>
+                                <i class="stars"></i>
+                                <i class="stars"></i>
+                                <i class="stars star__half"></i>
+                            </span>
+                            <span class="stamped-badge-caption">(782)</span>
                         </span>
-                        <span class="stamped-badge-caption">(782)</span>
-                    </span>
+                    </div>
+
                 </div>
 
                 <div class="product__image">
@@ -42,73 +667,92 @@
                 </div>
 
                 <div class="product__info">
-                    <div id="mobile_desk" class="product__header">
+                    <div id="product__header-desk" class="product__header">
                         <h1 class="product__tit">Capinha para celular Poeira das estrelas Manuscrita</h1>
-                        <div class="product__promotion">
-                            <span class="product__price old">R$ 79,90</span>
-                            <span class="product__price new">R$ 69,90</span>
-                        </div>
-        
-                        <span class="stamped-badge" onclick="goToByScroll('reviews')">
-                            <span class="stamped-starrating stamped-badge-starrating">
-                                <i class="stamped-fa stamped-fa-star"></i>
-                                <i class="stamped-fa stamped-fa-star"></i>
-                                <i class="stamped-fa stamped-fa-star"></i>
-                                <i class="stamped-fa stamped-fa-star"></i>
-                                <i class="stamped-fa stamped-fa-star-half-o"></i>
+
+                        <div class="d-flex">
+                            <div class="product__promotion">
+                                <span class="product__price old">R$ 79,90</span>
+                                <span class="product__price new">R$ 69,90</span>
+                            </div>
+
+                            <span class="stars__rating" onclick="goToByScroll('reviews')">
+                                <span class="stamped-starrating stamped-badge-starrating">
+                                    <i class="stars"></i>
+                                    <i class="stars"></i>
+                                    <i class="stars"></i>
+                                    <i class="stars"></i>
+                                    <i class="stars star__half"></i>
+                                </span>
+                                <span class="stamped-badge-caption">(782)</span>
                             </span>
-                            <span class="stamped-badge-caption">(782)</span>
-                        </span>
+                        </div>
+
                     </div>
 
                     <form class="product__form">
 
-                    <div class="form__row">
-                        <label>Modelo</label>   
-                        <select name="" id="" class="product__form--select">
-                            <option  value="">Selecione o modelo do seu celular</option>
-                            <option  value="2">iPhone 6/6s</option>
-                            <option  value="3">iPhone 6 Plus/6s Plus</option>
-                            <option  value="4">iPhone 7</option>
-                            <option  value="5">iPhone 7 Plus</option>
-                            <option  value="6">iPhone 8</option>
-                            <option  value="7">iPhone 8 Plus</option>
-                            <option  value="8">iPhone X/XS</option>
-                        </select>
-                    </div>
+                        <div class="form__row">
+                            <label>Modelo</label>
+                            <select name="" id="" class="product__form-field">
+                                <option value="0">Selecione o modelo do seu celular</option>
+                                <option value="1">iPhone 6/6s</option>
+                                <option value="2">iPhone 6 Plus/6s Plus</option>
+                                <option value="3">iPhone 7</option>
+                                <option value="4">iPhone 7 Plus</option>
+                                <option value="5">iPhone 8</option>
+                                <option value="6">iPhone 8 Plus</option>
+                                <option value="7">iPhone X/XS</option>
+                            </select>
+                        </div>
 
-                    <div class="form__row">
-                        <label>Tipo de capa</label>   
-                        <ul class="option__select">
-                            <li class=""><a href=""><img src="img/thumb1.jpg"/>Transparent</a></li>
-                            <li class=""><a href=""><img src="img/thumb2.jpg"/>Glitter Gold (R$ 79,90)</a></li>
-                            <li class=""><a href=""><img src="img/thumb3.png"/>Glitter Silver (R$ 79,90)</a></li>
-                            <li class=""><a href=""><img src="img/thumb4.jpg"/>Anti-Impacto (R$ 119,90)</a></li>
-                        </ul>
-                    </div>
+                        <div class="form__row">
+                            <label>Tipo de capa</label>
+                            <ul class="variation">
+                                <li class="variation__item"><a href="#" class="variation__link">
+                                        <div class="variation__thumb"><img src="img/thumb1.jpg" class="thumb" /></div>
+                                        Transparent
+                                    </a></li>
+                                <li class="variation__item"><a href="#" class="variation__link">
+                                        <div class="variation__thumb"><img src="img/thumb2.jpg" class="thumb" /></div>
+                                        Glitter Gold (R$ 79,90)
+                                    </a></li>
+                                <li class="variation__item"><a href="#" class="variation__link">
+                                        <div class="variation__thumb"><img src="img/thumb3.png" class="thumb" /></div>
+                                        Glitter Silver (R$ 79,90)
+                                    </a></li>
+                                <li class="variation__item"><a href="#" class="variation__link">
+                                        <div class="variation__thumb"><img src="img/thumb4.jpg" class="thumb" /></div>
+                                        Anti-Impacto (R$ 119,90)
+                                    </a></li>
+                            </ul>
+                        </div>
 
-                    <div class="form__row">
-                        <label>Personalize seu produto</label> 
-                        <input type="text" class="" placeholder="Digite seu nome">
-                    </div>
+                        <div class="form__row">
+                            <label>Personalize seu produto*</label>
+                            <input type="text" class="product__form-field" placeholder="Digite seu nome">
+                        </div>
 
-                    <div class="form__row">
-                        <label>Cor do nome</label>   
-                        <ul class="color__picker">
-                            <li class=""><span style="background-color: #fff" data-color="#fff"></span></li>
-                            <li class=""><span style="background-color: #37b5f9" data-color="#37b5f9"></span></li>
-                            <li class=""><span style="background-color: #d93dd2" data-color="#d93dd2"></span></li>
-                        </ul>
-                    </div>
+                        <div class="form__row">
+                            <label>Cor do nome*</label>
+                            <ul class="color__picker">
+                                <li class="color__item"><span style="background-color: #fff" data-color="#fff"></span>
+                                </li>
+                                <li class="color__item"><span style="background-color: #37b5f9"
+                                        data-color="#37b5f9"></span></li>
+                                <li class="color__item"><span style="background-color: #d93dd2"
+                                        data-color="#d93dd2"></span></li>
+                            </ul>
+                        </div>
 
-                    <div class="form_row">
-                        <button type="submit" id="add_to_cart" class="btn">Adicionar ao carrinho</a>
-                    </div>
+                        <div class="form__row">
+                            <button type="submit" id="add_to_cart" class="btn">Adicionar ao carrinho</a>
+                        </div>
 
                     </form>
                 </div>
 
-                
+
             </div>
         </section>
 
@@ -124,19 +768,22 @@
                     <a href="" class="tab__link">Descrição</a>
 
                     <div class="tab__txt">
-                        <p>As capinhas para celular da Gocase deixam o seu smartphone a sua cara. São mais de 1000 estampas exclusivas, produzidas com alta qualidade de 
-                        impressão, garantindo cores vivas e completa aderência. As capas são de TPU maleável (silicone maleável), protegendo o seu smartphone contra impactos,
-                        arranhões e sujeira ocasionados no cotidiano.</p>
+                        <p>As capinhas para celular da Gocase deixam o seu smartphone a sua cara. São mais de 1000
+                            estampas exclusivas, produzidas com alta qualidade de
+                            impressão, garantindo cores vivas e completa aderência. As capas são de TPU maleável
+                            (silicone maleável), protegendo o seu smartphone contra impactos,
+                            arranhões e sujeira ocasionados no cotidiano.</p>
 
-                        <img src="img/banner1.jpg" class="thumb" alt="banner destaque"/>
+                        <img src="img/banner1.jpg" class="thumb" alt="banner destaque" />
                     </div>
                 </div>
                 <div class="tab__content">
                     <a href="" class="tab__link">Detalhes</a>
 
                     <div class="tab__txt">
-                        <p>Após a confirmação de pagamento precisamos de até 5 dias úteis para a produção e postagem do seu pedido. Após a postagem se inicia a contagem do 
-                        prazo do frete para a sua localidade.</p>
+                        <p>Após a confirmação de pagamento precisamos de até 5 dias úteis para a produção e postagem do
+                            seu pedido. Após a postagem se inicia a contagem do
+                            prazo do frete para a sua localidade.</p>
                     </div>
                 </div>
             </div>
@@ -146,11 +793,11 @@
             <div class="row">
                 <h2 class="sec__tit">Combine com</h2>
                 <div class="combo__list">
-                    <div class="combo__item"><img src="img/combo1.jpg" class="thumb"/></div>
+                    <div class="combo__item"><img src="img/combo1.jpg" class="thumb" /></div>
                     <div class="plus"></div>
-                    <div class="combo__item"><img src="img/combo2.jpg" class="thumb"/></div>
+                    <div class="combo__item"><img src="img/combo2.jpg" class="thumb" /></div>
                     <div class="plus"></div>
-                    <div class="combo__item"><img src="img/combo3.jpg" class="thumb"/></div>
+                    <div class="combo__item"><img src="img/combo3.jpg" class="thumb" /></div>
                 </div>
                 <a href="" title="Comprar combo" class="combo__link">Comprar tudo por R$ 380,00</a>
             </div>
@@ -159,28 +806,28 @@
         <section class="suggestion">
             <div class="row">
                 <h2 class="sec__tit">Talvez você também goste</h2>
-                <ul class="suggestion__list">
+                <ul class="suggestion__list d-flex">
                     <li class="suggestion_item">
                         <a href="" title="">
-                            <img src="img/sugg1.jpg" class="thumb" alt="Produto sugerido"/>
-                            <div class="suggestion__tit">Product 1</div>
-                            <div class="suggestion__price">R$ 149,00</div>
+                            <img src="img/sugg1.png" class="thumb" alt="Produto sugerido" />
+                            <div class="suggestion__tit">Capinha para celular Rose Gold Manuscrita</div>
+                            <div class="suggestion__price">R$ 69,00</div>
                         </a>
                     </li>
 
                     <li class="suggestion_item">
                         <a href="" title="">
-                            <img src="img/sugg2.jpg" class="thumb" alt="Produto sugerido"/>
-                            <div class="suggestion__tit">Product 2</div>
-                            <div class="suggestion__price">R$ 89,00</div>
+                            <img src="img/sugg2.png" class="thumb" alt="Produto sugerido" />
+                            <div class="suggestion__tit">Capinha para celular Picture - Meu melhor presente</div>
+                            <div class="suggestion__price">R$ 69,90</div>
                         </a>
                     </li>
 
                     <li class="suggestion_item">
                         <a href="" title="">
-                            <img src="img/sugg3.jpg" class="thumb" alt="Produto sugerido"/>
-                            <div class="suggestion__tit">Product 3</div>
-                            <div class="suggestion__price">R$ 39,00</div>
+                            <img src="img/sugg3.png" class="thumb" alt="Produto sugerido" />
+                            <div class="suggestion__tit">Capinha para celular Coração Mapa Mundi Vintage</div>
+                            <div class="suggestion__price">R$ 54,89</div>
                         </a>
                     </li>
                 </ul>
@@ -218,5 +865,9 @@
             </div>
         </section>
     </main>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script> 
 </body>
+
 </html>
