@@ -2,29 +2,30 @@ $(document).ready(function($){
 
     $('.nav__trigger').click(function(){
         $('.navigation').toggleClass('active');
+        $('body').toggleClass('scrollNone');
     });
 
     $('.trigger__lvl1 > a').on("click", function(e) {
         e.preventDefault();
         var submenu = $(this);
         submenu.next('.menu__dropdown').addClass('show');
+        submenu.parent('.trigger__lvl1').addClass('active');
         e.stopPropagation();
     });
 
-    // $('.trigger__lvl2 > a').on("click", function(e) {
-    //     e.preventDefault();
-    //     var submenu = $(this);
-    //     submenu.next('.menu__dropdown').addClass('show');
-    //     e.stopPropagation();
-    // });
+    $('.trigger__lvl2').on("click", function(e) {
+        e.preventDefault();
+        $('.trigger__lvl2').removeClass('active');
+        $(this).addClass('active');
+        e.stopPropagation();
+    });
 
     $('.menu__title > a').on("click", function(e) {
         e.preventDefault();
         $('.menu__dropdown').removeClass('show');
+        $('.trigger__lvl1').removeClass('active');
         e.stopPropagation();
     });
-
-    menu__title
 
     $('.variation__link').click(function(e){
         e.preventDefault();
