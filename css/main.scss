@@ -161,53 +161,199 @@ $ft2: 'Roboto', sans-serif;
   z-index: 5;
 }
 
-.navigation{
-  background: $cl1;
-  display: none;
+.nav{
+  display: flex;
+}
+.nav__trigger{
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+
+  span{
+    width: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: 50% 50%;
+    left: 11px;
+
+    &::before{ top: -8px; }
+    &::after{ bottom: -8px; }
+
+    &::before,
+    &::after{
+      content: '';
+      width: 100%;
+      left: 0;
+    }
+  }
+  span,
+  span::before,
+  span::after{
+    position: absolute;
+    height: 3px;
+    background: #182631;
+    transition: all .25s ease;
+  }
+
+  &:focus{
+    outline: none;
+    
+  }
+
+}
+.logo{ 
+  margin: 0 10px;
+  height: 30px;
+  padding: 10px 0;
+  img{ height: 100%; }
 }
 
-.menu{ width: 100%; }
+.navigation{
+  background: #f2f2f2;
+  border-top: 1px solid #d6d6d6;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  position: absolute;
+  top: 50px;
+  left: -100vw;
+  transition: all .8s ease-in-out 0s;
 
-.menu__item{
+  .row{
+    padding: 0;
+  }
+}
+.navigation.active{ 
+  left: 0;
+}
+
+
+.menu{ 
+  width: 100%; 
+  flex-direction: column;
   position: relative;
-  transition: all 0.3s ease-in-out 0s;
 
-  
-  &:hover{
-    background: $cl2;
-    .menu__link{ color: $cl3; }
+  $pos: 45;
+  @for $i from 1 through 7 {
+    $pos: $pos - 45;
+    .menu__item:nth-of-type(#{$i}) .menu__link::before {
 
-    .menu__dropdown{
-      visibility: visible;
-      opacity: 1;
-      z-index: 1;
-      transform: translateY(0%);
-      transition-delay: 0s, 0s, 0.3s;
+      background: url('../img/menu_icons.svg') no-repeat; 
+  		background-position:center $pos + px;
     }
   }
 }
+
+.menu__item{
+  &:hover{
+    background: none;
+    border-width: 1px 4px 1px 0;
+    border-style: solid;
+    border-color: $cl2;
+    transition: all 0.3s ease-in-out 0s;
+  }
+}
 .menu__link{
-  color: $cl3;
-  font: normal 15px $ft1;
-  padding: 10px 20px;
+  color: lighten($cl1, 30%);
+  font: 600 15px $ft1;
+  padding: 20px 20px 20px 50px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+
+  &::before{
+    content: '';
+    display: block;
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    left: 2px;
+    top: calc(50% - 22.5px);
+  }
+
+}
+
+.menu__indicator{
+  width: 45px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: background .2s ease;
+
+  &::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    margin-left: -2px;
+    box-sizing: border-box;
+    border-top: 2px solid lighten($cl1, 30%);
+    border-left: 2px solid lighten($cl1, 30%);
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+}
+
+.menu__dropdown{ 
+  position: absolute;
+  left: -100vw;
+  top: 0;
+  z-index: 2;
+  width: calc(100% - 46px);
+  background: $cl3;
+  transition: all .8s ease-in-out 0s;
+}
+.menu__dropdown.show{ 
+  left: 0;
+}
+
+.menu__title{ 
+  > a{
+    background: $cl2;
+    color: $cl3;
+    font: 600 15px $ft1;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 20px 15px 40px;
+    display: block;
+    position: relative;
+  }
+  .menu__indicator{
+    left: 0;
+    transform: rotate(180deg);
+
+    &::before{ border-color: $cl3; }
+  }
+  
+}
+
+.trigger__lvl2{
+  position: relative;
+}
+
+.drop__link{
+  color: lighten($cl1, 30%);
+  font: 600 15px $ft1;
+  padding: 15px 20px;
   display: block;
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
 }
 
-.menu__dropdown{ 
-  visibility: hidden;
-  opacity: 0;
+
+#product__main{
+  transition: all .7s ease-in-out 0s;
+  width: 100vw;
   position: absolute;
   left: 0;
-  top: 100%;
-  width: 300px;
-  background: $cl3;
-  border: 1px solid;
-  transform: translateY(-2em);
-  z-index: -1;
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 
 #breadcrumb{
@@ -233,7 +379,7 @@ $ft2: 'Roboto', sans-serif;
 }
 
 .breadcrumb__link{
-  color: lighten($cl1, 30%);
+  color: lighten($cl1, 40%);
   text-decoration: none;
 
   &:hover{ color: $cl2;}
@@ -253,7 +399,7 @@ $ft2: 'Roboto', sans-serif;
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 5;
+  z-index: 4;
   width: 100%;
   .row{ 
     flex-direction: row; 
@@ -473,17 +619,44 @@ $ft2: 'Roboto', sans-serif;
   }
 }
 
-.tab__content{
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
+.modal__slide{
+  // transition: all 0.3s ease-in-out 0s;
+  transition: all .7s ease-in-out 0s;
   width: 100vw;
   height: 100vh;
-  background: $cl3;
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  background: $cl2;
+  // display: none;
 }
-.tab__content.active{
-  display: block;
+
+.slideIn{
+  #product__main{
+    left: -99%;
+  }
+
+  .modal__slide{
+    right: 0;
+    // display: block;
+  }
+}
+
+.slideIn,
+.slideIn body{
+  // width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slideOut{
+  #product__main{
+    left: 0;
+  }
+
+  .modal__slide{
+    right: -100vw;
+  }
 }
 
 .product_combo,
@@ -495,6 +668,50 @@ $ft2: 'Roboto', sans-serif;
   .row{ width: 960px; margin: 0 auto;}
 
   .navigation{ display: block;}
+  .menu{ width: 100%; }
+
+  .menu__item{
+    position: relative;
+    transition: all 0.3s ease-in-out 0s;
+
+    
+    &:hover{
+      background: $cl2;
+      .menu__link{ color: $cl3; }
+
+      .menu__dropdown{
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
+        transform: translateY(0%);
+        transition-delay: 0s, 0s, 0.3s;
+      }
+    }
+  }
+  .menu__link{
+    color: $cl3;
+    font: normal 15px $ft1;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .menu__dropdown{ 
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 300px;
+    background: $cl3;
+    border: 1px solid;
+    transform: translateY(-2em);
+    z-index: -1;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  }
+
 
   #breadcrumb{ background: none; }
 
@@ -515,6 +732,19 @@ $ft2: 'Roboto', sans-serif;
     position: static; 
     .btn{ width: 40%;}
   }
+
+  .slideIn,
+  .slideIn body{
+    height: auto;
+    overflow: auto;
+  }
+
+  #product__main{
+    width: auto;
+    position: initial;
+  }
+
+  .modal__slide{ display: none;}
 
 }
 
