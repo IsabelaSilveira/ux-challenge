@@ -887,7 +887,7 @@ $ft2: 'Roboto', sans-serif;
   color: $cl1;
   font-size: 14px;
   font-family: $ft1;
-  &:last-child{ width: 70%;}
+  &:last-child{ width: 70%; padding-left: 10px;}
 }
 
 .review__row{
@@ -959,7 +959,7 @@ $ft2: 'Roboto', sans-serif;
     margin-bottom: 17px;
   }
 
-  .product__image{ width: 50%;}
+  .product__photos{ width: 50%;}
   .product__info{ width: 40%;}
 
   #product__content .flashsale{ 
