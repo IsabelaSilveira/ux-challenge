@@ -496,8 +496,15 @@
 
                 </div>
 
-                <div class="product__image">
-                    <img src="img/product_thumb.png" class="thumb">
+                <div class="product__photos">
+                    <div class="product__image">
+                        <img src="img/product_thumb.png" class="thumb">
+                    </div>
+
+                    <ul class="product__thumbs">
+                        <li class="thumb__item active"><img src="img/product_thumb.png" class="thumb" /></li>
+                        <li class="thumb__item"><img src="img/product_thumb2.png" class="thumb" /></li>
+                    </ul>
                 </div>
 
                 <div class="product__info">
@@ -621,11 +628,15 @@
                     <a href="javascript:void(0)" class="tab__return">< Descrição</a>
             
                     <div class="tab__txt">
-                        <p>As capinhas para celular da Gocase deixam o seu smartphone a sua cara. São mais de 1000
-                            estampas exclusivas, produzidas com alta qualidade de
-                            impressão, garantindo cores vivas e completa aderência. As capas são de TPU maleável
-                            (silicone maleável), protegendo o seu smartphone contra impactos,
-                            arranhões e sujeira ocasionados no cotidiano.</p>
+                        <p>
+                            As capinhas para celular da Gocase deixam o seu smartphone a sua cara. São mais de 1000
+                            estampas exclusivas, produzidas com alta qualidade de impressão, garantindo cores vivas e completa aderência. 
+                        </p>
+
+                        <p>
+                            As capas são de TPU maleável (silicone maleável), protegendo o seu smartphone contra impactos,
+                            arranhões e sujeira ocasionados no cotidiano.
+                        </p>
             
                         <img src="img/banner1.jpg" class="thumb" alt="banner destaque" />
                     </div>
@@ -638,6 +649,7 @@
                         <p>Após a confirmação de pagamento precisamos de até 5 dias úteis para a produção e postagem do
                             seu pedido. Após a postagem se inicia a contagem do
                             prazo do frete para a sua localidade.</p>
+                        <img src="img/banner2.jpg" class="thumb" alt="banner destaque" />
                     </div>
                 </div>
                 
@@ -647,14 +659,28 @@
         <section class="product_combo">
             <div class="row">
                 <h2 class="sec__tit">Combine com</h2>
-                <div class="combo__list">
-                    <div class="combo__item"><img src="img/combo1.jpg" class="thumb" /></div>
+                <div class="combo__list d-flex">
+                    <a href="#" title="Capinha para celular Poeira das estrelas Manuscrita" class="combo__link">
+                        <img src="img/combo1.png" class="thumb" />
+                        <div class="combo__tit">Capinha para celular Coração Mapa Mundi Vintage</div>
+                    </a>
+
                     <div class="plus"></div>
-                    <div class="combo__item"><img src="img/combo2.jpg" class="thumb" /></div>
+
+                    <a href="#" title="Mochila Gocase Bag Personalizada - Poeira das Estrelas Manuscrita" class="combo__link">
+                        <img src="img/combo2.jpg" class="thumb" />
+                        <div class="combo__tit">Mochila Gocase Bag Personalizada - Poeira das Estrelas Manuscrita</div>
+                    </a>
+
                     <div class="plus"></div>
-                    <div class="combo__item"><img src="img/combo3.jpg" class="thumb" /></div>
+
+                    <a href="#" title="Carteira Soho Personalizada - Poeira Das Estrelas Manuscrita" class="combo__link">
+                        <img src="img/combo3.jpg" class="thumb" />
+                        <div class="combo__tit">Carteira Soho Personalizada - Poeira Das Estrelas Manuscrita</div>
+                    </a>
                 </div>
-                <a href="" title="Comprar combo" class="combo__link">Comprar tudo por R$ 380,00</a>
+
+                <a href="#" title="Comprar combo" class="combo__buy btn">Comprar tudo por R$ 380,00</a>
             </div>
         </section>
 
@@ -662,24 +688,24 @@
             <div class="row">
                 <h2 class="sec__tit">Talvez você também goste</h2>
                 <ul class="suggestion__list d-flex">
-                    <li class="suggestion_item">
-                        <a href="" title="">
+                    <li class="suggestion__item">
+                        <a href="" title="" class="suggestion__link">
                             <img src="img/sugg1.png" class="thumb" alt="Produto sugerido" />
                             <div class="suggestion__tit">Capinha para celular Rose Gold Manuscrita</div>
                             <div class="suggestion__price">R$ 69,00</div>
                         </a>
                     </li>
 
-                    <li class="suggestion_item">
-                        <a href="" title="">
+                    <li class="suggestion__item">
+                        <a href="" title="" class="suggestion__link">
                             <img src="img/sugg2.png" class="thumb" alt="Produto sugerido" />
                             <div class="suggestion__tit">Capinha para celular Picture - Meu melhor presente</div>
                             <div class="suggestion__price">R$ 69,90</div>
                         </a>
                     </li>
 
-                    <li class="suggestion_item">
-                        <a href="" title="">
+                    <li class="suggestion__item">
+                        <a href="" title="" class="suggestion__link">
                             <img src="img/sugg3.png" class="thumb" alt="Produto sugerido" />
                             <div class="suggestion__tit">Capinha para celular Coração Mapa Mundi Vintage</div>
                             <div class="suggestion__price">R$ 54,89</div>
@@ -695,28 +721,74 @@
                 <div class="reviews__row">
                     <div class="reviews__box">
                         <strong class="reviews_grade">4.8</strong>
-                        <span class="stamped-badge">
+
+                        <span class="stars__rating">
                             <span class="stamped-starrating stamped-badge-starrating">
-                                <i class="stamped-fa stamped-fa-star"></i>
-                                <i class="stamped-fa stamped-fa-star"></i>
-                                <i class="stamped-fa stamped-fa-star"></i>
-                                <i class="stamped-fa stamped-fa-star"></i>
-                                <i class="stamped-fa stamped-fa-star-half-o"></i>
+                                <i class="stars"></i>
+                                <i class="stars"></i>
+                                <i class="stars"></i>
+                                <i class="stars"></i>
+                                <i class="stars star__half"></i>
                             </span>
-                            <span class="stamped-badge-caption">782 comentários</span>
                         </span>
+                        <span class="stamped-badge-caption review__info">782 comentários</span>
                     </div>
 
                     <div class="reviews__box">
                         <strong class="reviews_grade">98%</strong>
-                        <span>dos nossos clientes recomendam este produto</span>
+                        <span class="review__info">dos nossos clientes recomendam este produto</span>
                     </div>
                 </div>
 
-                <ul class="reviews__tabs">
-                    <li class="tab__item"><a href="Descrição" class="tab__link" data-tab="tab01">Relevantes</a></li>
-                    <li class="tab__item"><a href="Detalhes" class="tab__link" data-tab="tab02">Recentes</a></li>
+                <ul class="reviews__filter">
+                    <li class="filter__item"><a href="" class="filter__link" id="relevante">Relevantes</a></li>
+                    <li class="filter__item"><a href="" class="filter__link" id="recente">Recentes</a></li>
                 </ul>
+
+                <ul class="reviews__list">
+                    <li class="review__item d-flex" data-filter="recente">
+                        <div class="review__col"><img src="img/review__photo.png" class="thumb" alt="Foto cliente" /></div>
+                        <div class="review__col">
+                            <div class="review__row">
+                                <strong class="review__name">Ana M.</strong>
+                                <span class="review__date">16/05/2019</span>
+                            </div>
+                            <span class="stars__rating">
+                                <span class="stamped-starrating stamped-badge-starrating">
+                                    <i class="stars"></i>
+                                    <i class="stars"></i>
+                                    <i class="stars"></i>
+                                    <i class="stars"></i>
+                                    <i class="stars"></i>
+                                </span>
+                            </span>
+
+                            <p class="review__txt">Amei minha case, já quero outras. Material de excelente qualidade. Todos são lindos, o difícil é escolher...</p>
+                        </div>
+                    </li>
+
+                    <li class="review__item d-flex" data-filter="relevante">
+                        <div class="review__col"><img src="img/review__photo.png" class="thumb" alt="Foto cliente" /></div>
+                        <div class="review__col">
+                            <div class="review__row">
+                                <strong class="review__name">Vanessa L.</strong>
+                                <span class="review__date">03/04/2019</span>
+                            </div>
+                            <span class="stars__rating">
+                                <span class="stamped-starrating stamped-badge-starrating">
+                                    <i class="stars"></i>
+                                    <i class="stars"></i>
+                                    <i class="stars"></i>
+                                    <i class="stars"></i>
+                                    <i class="stars star__half"></i>
+                                </span>
+                            </span>
+
+                            <p class="review__txt">Amei minha case, já quero outras.</p>
+                        </div>
+                    </li>
+                </ul>
+
             </div>
         </section>
     </main>

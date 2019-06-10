@@ -1,10 +1,11 @@
 $(document).ready(function($){
-
+    //menu - master
     $('.nav__trigger').click(function(){
         $('.navigation').toggleClass('active');
         $('body').toggleClass('scrollNone');
     });
 
+    //menu - nível 1
     $('.trigger__lvl1 > a').on("click", function(e) {
         e.preventDefault();
         var submenu = $(this);
@@ -13,6 +14,7 @@ $(document).ready(function($){
         e.stopPropagation();
     });
 
+    //menu - nível 2
     $('.trigger__lvl2').on("click", function(e) {
         e.preventDefault();
         $('.trigger__lvl2').removeClass('active');
@@ -20,6 +22,7 @@ $(document).ready(function($){
         e.stopPropagation();
     });
 
+    //menu - retornar
     $('.menu__title > a').on("click", function(e) {
         e.preventDefault();
         $('.menu__dropdown').removeClass('show');
@@ -27,6 +30,20 @@ $(document).ready(function($){
         e.stopPropagation();
     });
 
+    //miniaturas do produto
+    $('.thumb__item > img').click(function(){
+
+        var urlThumb = $(this).attr('src');
+        var thumb = $(this);
+
+        $('.thumb__item').removeClass('active');
+        thumb.parent('.thumb__item').addClass('active');
+
+        $('.product__image > img').attr('src', urlThumb);
+    });
+
+
+    //opcoes do produto - personalizacao
     $('.variation__link').click(function(e){
         e.preventDefault();
         $('.variation__link').removeClass('active');
@@ -38,11 +55,7 @@ $(document).ready(function($){
         $(this).addClass('active');
     });
 
-    $('.color__item').click(function(){
-        $('.color__item').removeClass('active');
-        $(this).addClass('active');
-    });
-
+    //tabs - detalhes do produto
     $('.tab__link').click(function(){
         var id_btn = $(this).attr('data-tab');
 
@@ -66,17 +79,28 @@ $(document).ready(function($){
         });
     });
 
-    // $('.tab__return').on('click', function(){
-    //     // $(this).parent().removeClass('active');
-    //     console.log("Clicou");
-    //     $('html').removeClass('slideIn');
-    //     $('html').addClass('slideOut');
-    // });
+    //review filter
+    $('.filter__link').click(function(e){
+        e.preventDefault();
+        var filter_id = $(this).attr('id');
+    
+        $('.filter__link').parent('.filter__item').removeClass('active');
+        $(this).parent('.filter__item').addClass('active');
+    
+        $('.review__item').each(function(){
+          var filter_val = jQuery(this).attr('data-filter');
+    
+          if(filter_val == filter_id){
+            $('.review__item').hide();
+            $(this).show();
+          }
+    
+        });
+    });
     
 });
 
 $(document).on('click', '.tab__return', function() {
-    console.log("Clicou");
     $('html').removeClass('slideIn');
     $('html').addClass('slideOut');
     
@@ -84,5 +108,5 @@ $(document).on('click', '.tab__return', function() {
     setTimeout(function(){
         $('.modal__slide').html('');
         $('html').removeClass('slideOut');
-    }, 300);
+    }, 700);
 }) ;
